@@ -126,17 +126,19 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Bem Vindo   </a>
+              <a class="nav-link " href="#">Entre com  </a>
             </li>
 			  <li class="nav-item">
 			  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
 			  </li>
-			  <li id = "nomeFB" class="nav-item">
+			  <li class="nav-item">
 			  <script>
 			  function testAPI() {
-							FB.api('/me', function(response) {		 
+					console.log('Bem vindo(a)! Estamos buscando suas informações .... ');
+					FB.api('/me', function(response) {
+					  console.log('Login bem sucedido para: ' + response.name);
 					  document.getElementById('status').innerHTML =
-						  response.name  ;
+						'Agradeçemos por logar ' + response.name + ' !';
 					});
 				  }			  
 			  </script>

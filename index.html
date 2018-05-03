@@ -134,11 +134,9 @@
 			  <li class="nav-item">
 			  <script>
 			  function testAPI() {
-					console.log('Bem vindo(a)! Estamos buscando suas informações .... ');
-					FB.api('/me', function(response) {
-					  console.log('Login bem sucedido para: ' + response.name);
+							FB.api('/me', function(response) {		 
 					  document.getElementById('status').innerHTML =
-						'Agradeçemos por logar ' + response.name + ' !';
+						 + response.name + ;
 					});
 				  }			  
 			  </script>
@@ -150,10 +148,10 @@
 -->
 
 
-
-			<div id="status">
-			</div>
-
+			<li id = "nomeFB" class="nav-item">
+						<div id="status">
+						</div>
+			  </li>
 
 			  </li>
           </ul>

@@ -91,14 +91,7 @@
 
   // Aqui executamos um teste muito simples da API do Graph depois que o login é feito
   // bem sucedido. Veja statusChangeCallback () para quando esta chamada é feita.
-  function testAPI() {
-    console.log('Bem vindo(a)! Estamos buscando suas informações .... ');
-    FB.api('/me', function(response) {
-      console.log('Login bem sucedido para: ' + response.name);
-      document.getElementById('status').innerHTML =
-        'Agradeçemos por logar em, ' + response.name + '!';
-    });
-  }
+  
 </script>
 
 <!--
@@ -119,7 +112,7 @@
 	  
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-		<fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
+		
         <a class="navbar-brand" href="#">Menu:</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -144,8 +137,23 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link " href="#">Social</a>
+              <a class="nav-link " href="#">Entre com  </a>
             </li>
+			  <li class="nav-item">
+			  <fb:login-button scope="public_profile,email" onlogin="checkLoginState();"> </fb:login-button>
+			  </li>
+			  <li>
+			  <script>
+			  function testAPI() {
+					console.log('Bem vindo(a)! Estamos buscando suas informações .... ');
+					FB.api('/me', function(response) {
+					  console.log('Login bem sucedido para: ' + response.name);
+					  document.getElementById('status').innerHTML =
+						'Agradeçemos por logar ' + response.name + ' !';
+					});
+				  }			  
+			  </script>
+			  </li>
           </ul>
           <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Digite sua busca aqui" aria-label="Search">

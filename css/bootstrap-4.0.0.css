@@ -58,8 +58,8 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   display: block;
 }
 
-.fbStatus{
-	text-decoration-color: aliceblue;
+li.fbStatus{
+	text-decoration-color: #fff;
 }
 
 body {

@@ -58,9 +58,9 @@ article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, s
   display: block;
 }
 
-li.fbStatus{
-	text-decoration-color: #fff;
-}
+	fbStatus{
+color: aliceblue;	
+	}
 
 body {
   margin: 0;
